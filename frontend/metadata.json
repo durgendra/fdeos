@@ -1,0 +1,8 @@
+{
+  "name": "FDE OS",
+  "description": "An AI-native workspace for Forward-Deployed Engineering, Solutions Engineering, and technical customer deployment teams.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

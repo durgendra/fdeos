@@ -1,0 +1,12 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+PUBLICATION_REVIEW.md
+README.draft.md
+README.draft.*
+*.draft.md

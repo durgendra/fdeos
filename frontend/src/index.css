@@ -1,0 +1,237 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Base Light Mode variables and core overrides */
+.light-mode {
+  --bg-primary: #f8fafc; /* slate-50 */
+  --bg-secondary: #ffffff; /* pure white */
+  --border-color: #e2e8f0; /* slate-200 */
+  --text-primary: #0f172a; /* slate-900 */
+  --text-secondary: #475569; /* slate-600 */
+  
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Custom Overrides for Marketing & Authenticated Views */
+
+/* 1. Global Background Overrides */
+.light-mode,
+.light-mode #fde-main-stage,
+.light-mode #marketing-viewport,
+.light-mode #auth-canvas {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+/* 2. Card overrides: translate heavy black boxes to clean, elevated crisp cards */
+.light-mode .bg-zinc-900,
+.light-mode .bg-zinc-950,
+.light-mode .bg-zinc-900\/50,
+.light-mode .bg-zinc-900\/60,
+.light-mode .bg-zinc-950\/60,
+.light-mode .bg-zinc-900\/40,
+.light-mode .bg-zinc-900\/20,
+.light-mode .bg-zinc-900\/10 {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  color: #0f172a !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05) !important;
+}
+
+.light-mode .border-zinc-805,
+.light-mode .border-zinc-800,
+.light-mode .border-zinc-900,
+.light-mode .border-zinc-800\/80 {
+  border-color: #e2e8f0 !important;
+}
+
+/* 3. Text overrides for readability in Light Mode */
+.light-mode .text-white,
+.light-mode .text-zinc-100,
+.light-mode .text-zinc-200 {
+  color: #0f172a !important;
+}
+
+.light-mode .text-zinc-300 {
+  color: #1e293b !important;
+}
+
+.light-mode .text-zinc-400 {
+  color: #475569 !important;
+}
+
+.light-mode .text-zinc-500 {
+  color: #64748b !important;
+}
+
+/* 4. Marketing Navigation Bar styles in light mode */
+.light-mode #marketing-navigation-rail {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  border-color: #e2e8f0 !important;
+  backdrop-filter: blur(12px) !important;
+}
+.light-mode #marketing-navigation-rail .text-white {
+  color: #0f172a !important;
+}
+.light-mode #marketing-navigation-rail .text-zinc-400 {
+  color: #475569 !important;
+}
+.light-mode #marketing-navigation-rail .hover\:text-white:hover {
+  color: #4f46e5 !important;
+}
+
+/* 5. Custom gradient overlays and glow graphics for gorgeous light visuals */
+.light-mode .bg-indigo-500\/10,
+.light-mode .bg-indigo-500\/5,
+.light-mode .bg-indigo-600\/10,
+.light-mode .bg-indigo-950\/40,
+.light-mode .bg-indigo-900\/20 {
+  background-color: rgba(99, 102, 241, 0.06) !important;
+}
+.light-mode .bg-zinc-900\/30 {
+  background-color: rgba(241, 245, 249, 0.6) !important;
+}
+
+/* 6. Fix for hero headers and text gradients */
+.light-mode .bg-clip-text {
+  background-image: linear-gradient(135deg, #4f46e5 0%, #312e81 100%) !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* 7. Dropdown selection and inputs */
+.light-mode select,
+.light-mode input,
+.light-mode textarea {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+}
+
+/* 8. Fix background blocks in diagrams / playbooks */
+.light-mode .divide-zinc-800 > * + * {
+  border-color: #e2e8f0 !important;
+}
+.light-mode .divide-zinc-900 > * + * {
+  border-color: #e2e8f0 !important;
+}
+
+/* 9. Buttons inside apps */
+.light-mode .bg-zinc-100 {
+  background-color: #0f172a !important;
+  color: #ffffff !important;
+}
+.light-mode .bg-zinc-100:hover {
+  background-color: #1e293b !important;
+}
+.light-mode .text-zinc-950 {
+  color: #ffffff !important;
+}
+
+/* 10. Simulation banner & specific interactive workspace areas */
+.light-mode .bg-zinc-900 {
+  background-color: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+}
+
+/* Playbooks and tables */
+.light-mode .hover\:bg-zinc-900\/40:hover,
+.light-mode .hover\:bg-zinc-900\/50:hover,
+.light-mode .hover\:bg-zinc-900\/20:hover {
+  background-color: #f1f5f9 !important;
+}
+
+.light-mode .bg-emerald-950\/10 {
+  background-color: rgba(16, 185, 129, 0.1) !important;
+  color: #047857 !important;
+}
+.light-mode .bg-rose-950\/20 {
+  background-color: rgba(244, 63, 94, 0.1) !important;
+  color: #be123c !important;
+}
+.light-mode .bg-amber-950\/20,
+.light-mode .bg-amber-500\/10 {
+  background-color: rgba(245, 158, 11, 0.1) !important;
+  color: #b45309 !important;
+}
+
+/* Alert banner */
+.light-mode .text-amber-800 {
+  color: #92400e !important;
+}
+.light-mode .text-amber-900 {
+  color: #78350f !important;
+}
+
+/* Quick checklist and detail view tables */
+.light-mode .bg-zinc-900\/80 {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+}
+
+.light-mode .border-zinc-850,
+.light-mode .border-zinc-700,
+.light-mode .border-zinc-800\/50,
+.light-mode .border-zinc-900\/40 {
+  border-color: #cbd5e1 !important;
+}
+
+/* 11. Light mode support for FDE OS Extraction Core bento flow */
+.light-mode .lg-span-3.bg-gradient-to-br,
+.light-mode .bg-gradient-to-br.from-indigo-950.to-zinc-950 {
+  background-image: linear-gradient(135deg, #f0f3ff 0%, #ffffff 100%) !important;
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.1), 0 4px 6px -4px rgba(79, 70, 229, 0.1) !important;
+}
+.light-mode .bg-gradient-to-br.from-indigo-950.to-zinc-950 h5 {
+  color: #0f172a !important;
+}
+.light-mode .bg-gradient-to-br.from-indigo-950.to-zinc-950 p.text-indigo-305 {
+  color: #4f46e5 !important;
+  text-decoration-color: #4f46e5 !important;
+}
+
+/* 12. Fix text contrast for indigo tags, labels and micro subtitles in Light Mode */
+.light-mode .text-indigo-300,
+.light-mode .text-indigo-400,
+.light-mode .text-indigo-305 {
+  color: #4338ca !important; /* solid, highly legible indigo-700 */
+}
+
+/* 13. Comparison Table FDE OS column enhancements in Light Mode */
+.light-mode th.bg-indigo-950\/20 {
+  background-color: #e0e7ff !important; /* indigo-150 / 100 tint */
+  color: #312e81 !important; /* deep indigo-900 */
+}
+
+.light-mode td.bg-indigo-950\/10 {
+  background-color: #f5f7ff !important; /* very soft elegant indigo tint */
+}
+
+.light-mode .border-indigo-950\/40 {
+  border-color: #c7d2fe !important; /* indigo-200 */
+}
+
+.light-mode .border-indigo-950\/30 {
+  border-color: #e0e7ff !important; /* indigo-100 */
+}
+
+.light-mode .border-indigo-500\/25 {
+  border-color: rgba(99, 102, 241, 0.3) !important;
+}
+
+.light-mode .border-indigo-500\/15 {
+  border-color: rgba(99, 102, 241, 0.25) !important;
+}
+
+/* Ensure the checkmarks in FDE OS column stand out neatly in light mode */
+.light-mode td.bg-indigo-950\/10 .text-indigo-400 {
+  color: #4338ca !important;
+}
+
+
