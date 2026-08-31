@@ -72,15 +72,6 @@ npm run dev
 - `frontend/src/components/` - auth, sidebar, and workspace UI
 - `frontend/src/hooks/` - data-loading hooks
 
-## Current Status
-
-Looks like a polished product demo and one of the stronger publish candidates in the workspace.
-
-## Limitations
-
-- No explicit repo-level license
-- Backend still depends on a MongoDB instance for full behavior
-
 ## License
 
 No explicit license file was found at the repository root.
